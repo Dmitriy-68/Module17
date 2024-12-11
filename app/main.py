@@ -4,7 +4,7 @@ from routers import task, user
 app = FastAPI()
 
 @app.get('/')
-async def message():
+async def message() -> dict:
     return {"message": "Welcome to Taskmanager"}
 
 app.include_router(task.router)
